@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Register page</title>
+  </head>
+  <body>
+    <main class="auth-page">
+      <div class="box">
+        <h2>Sign Up</h2>
+        <form method="post" action="">
+          <div class="input-div">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required placeholder="Full Name" />
+          </div>
+          <div class="input-div">
+            <label for="email">Full Name:</label>
+            <input
+              type="email"
+              required
+              id="email"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="input-div">
+            <label for="password">Full Name:</label>
+            <input
+              type="password"
+              required
+              id="password"
+              placeholder="password"
+            />
+          </div>
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
+        <p class="form-tips">
+          Already have an account? <a href="/login.html">Login</a>
+        </p>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="./js/register.js"></script>
+</html>
