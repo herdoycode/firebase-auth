@@ -30,17 +30,12 @@ checkStatus();
 const docRef = doc(db, "users", isAuthenticated);
 const docSnap = await getDoc(docRef);
 
-const userName = document.getElementById("user-name");
-const logoutBtn = document.getElementById("logoutBtn");
+const fullName = document.getElementById("fullName");
+const email = document.getElementById("email");
 
 if (docSnap.exists()) {
-  userName.innerText = docSnap.data().fullName;
+  fullName.value = docSnap.data().fullName;
+  email.value = docSnap.data().email;
 } else {
-  // docSnap.data() will be undefined in this case
   console.log("No such document!");
 }
-
-logoutBtn.addEventListener("click", () => {
-  localStorage.removeItem("userId");
-  window.location.href = "login.html";
-});
